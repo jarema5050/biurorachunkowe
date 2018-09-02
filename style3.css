@@ -6,19 +6,27 @@ font-family: 'Roboto Slab', serif;
 .owijak
 {
 	width:100%;
-	position:absolute;
-	top:0px;
-	padding-left:auto;
-	padding-right:auto;
-	
+	text-align:center;
+	background-color:#4183f4;
+	border-bottom:1px solid #2c6bd6;
+	border-top:1px solid #2c6bd6;
+	opacity:0.9;
+
 }
 .owijak img
 {
-	max-width:80px;
-	max-height:80px;
-	margin-top:10px;
+	max-width:60px;
+	max-height:60px;
 	margin-left:auto;
 	margin-right:30px;
+}
+.owijak img:hover
+{
+	border:1px solid white;
+}
+.owijak ul
+{
+	margin-top:0;
 }
 #minlogo
 {	
@@ -137,6 +145,15 @@ border-radius:5px;
 	color:white;
 	background-color:#4183f4;
 }
+.dark h1
+{
+	padding-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:30px;
+	color:white;
+}
+
 .nav-item
 {
 	
@@ -152,7 +169,6 @@ border-radius:5px;
 }
 .container
 {
-	
 	background-color:#f9fafc;
 }
 .span4 {
@@ -187,6 +203,7 @@ font-size:80px;
 {
 	color:white;
 	background-color:#4183f4;
+	text-align:justify;
 }
 .card-header
 {
@@ -204,10 +221,19 @@ font-size:80px;
 
 .btn
 {
-	font-size:40px;
+	font-size:32px;
 	text-decoration:0;
 	background-color:#4183f4;
 	color:white;
+}
+#send
+{
+	border:2px solid white;
+}
+#send:hover
+{
+	border:2px solid #04223C;
+	color: #04223C;
 }
 .btn i
 {
@@ -228,4 +254,54 @@ font-size:80px;
 	max-width:100%;
 	padding:0;
 	text-align:center;
+}
+h3
+{
+	padding:30px;
+}
+.emailForm input ,textarea
+{
+	margin-top:10px;
+	margin-bottom:10px;
+	border:0;
+	background-color:#4183f4;
+	border-bottom:1px solid #2c6bd6;
+	max-height:50px;
+}
+input:focus {
+    color: white;
+}
+textarea:focus
+{
+	 color: white;
+	 max-height:250px;
+} 
+::placeholder
+{color:#04223C;}
+.adres
+{
+	text-align:left;
+	margin-top:100px;
+}
+.adicon
+{
+	margin-left:60px;
+	font-size:28px;
+	display:inline-block;
+}
+.aditem
+{
+	margin-left:30px;
+	display:inline-block;
+	text-align:justify;
+	font-size:16px;
+}
+.footer
+{
+	background-color:#04223C;
+	color:white;
+	padding:10px 0;
+	text-align:center;
+	width:100%;
+	opacity:0.7;
 }

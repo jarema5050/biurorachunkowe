@@ -11,47 +11,75 @@
 	<link rel="stylesheet" href="style3.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="fontello/css/fontello.css">
+	<link rel="icon" href="img/imglog.png">
+
+		<script src="jquery-3.3.1.min.js"></script>
+	<script src="jquery.scrollTo.min.js"></script>
+	<script>
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			$('#link1').click(function(){$.scrollTo($('body'),500);});
+			$('#link2').click(function(){$.scrollTo($('#onas'),500);});
+			$('#link3').click(function(){$.scrollTo($('#oferta'),500);});
+			$('#link4').click(function(){$.scrollTo($('#dojazd'),500);});
+			$('#link5').click(function(){$.scrollTo($('#kontakt'),500);});
+		}
+		);
+	</script>
+	<link rel="stylesheet" href="contact/css/form.css">
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
     <title>Ewa Sokołowska: Biuro Rachunkowe</title>
+	
+
+	
+	
   </head>
   <body>
+
 	<div class="container-fluid" style="padding:0;">
-	<section class="one">
-	<div class="tlo"></div>
-	<div class="row owijak">
-	<img src="img/imglog.png" alt="Logo" >
+	<div class="owijak fixed-top">
+	<div class="row">
+	<img src="img/imglog.png" id="link1" alt="Logo">
 	<!--<div class="offset-md-2"></div>-->
 	<ul class="nav">
   <li class="nav-item col-xs-12">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#" id="link2">O nas</a>
   </li>
   <li class="nav-item  col-xs-12" >
-    <a class="nav-link  col-xs-12" href="#">Link</a>
+    <a class="nav-link  col-xs-12"  href="#" id="link3">Oferta</a>
   </li>
   <li class="nav-item  col-xs-12">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#" id="link4">Dojazd</a>
   </li>
   <li class="nav-item  col-xs-12">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#" id="link5">Kontakt</a>
   </li>
 	</ul>
 	</div>
+	</div>
+	<section class="one">
+	<div class="tlo"></div>
 	<div class="row biglogo col-xs-12">
 	<span id="imieinazw">Ewa <span id="nazw">Sokołowska</span></span>
 	<br/><span id="firma">Biuro Rachunkowe</span>
 	</div>
 	</section>
 	<div class="container-fluid valign-wrapper center-align">
-	<section class="two">
+	<section class="two"  id="onas">
 	<div class="jumbotron light">
 	<div class="row">
 	<h1 class="col-sm-12">O nas</h1>
-	<div class="span4"><img src="img/owner.jpg" width="25%" height="35%" alt="właściciel"></div><div class="col-sm-12" style="padding-bottom:30px">O to nasza rodzinna firma. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien augue. Donec volutpat fermentum mauris, eget pharetra diam vulputate at. Aliquam et mauris in enim posuere mattis vitae in neque. Suspendisse posuere sem at sem semper tincidunt. Cras in nunc aliquet, rutrum eros lobortis, hendrerit tellus. Donec ipsum nibh, blandit at dui ut, iaculis pharetra mi. Nulla facilisi.</div>
+	<div class="span4"><img src="img/owner.jpg" width="25%" height="35%" alt="właściciel"></div><div class="col-sm-12" style="padding-bottom:30px; text-align:justify;">O to nasza rodzinna firma. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sapien augue. Donec volutpat fermentum mauris, eget pharetra diam vulputate at. Aliquam et mauris in enim posuere mattis vitae in neque. Suspendisse posuere sem at sem semper tincidunt. Cras in nunc aliquet, rutrum eros lobortis, hendrerit tellus. Donec ipsum nibh, blandit at dui ut, iaculis pharetra mi. Nulla facilisi.</div>
 	</div></div></section>
-	<section class="three">
+	<section class="three"  id="oferta">
 	<div class="jumbotron dark">
 	<div class="row">
 	
-	<h1 class="col-sm-12" style="color:white;">Oferta</h1>
+	<h1 class="col-sm-12">Oferta</h1>
 
 <div id="accordion">
   <div class="card">
@@ -101,10 +129,9 @@
 	</div>
 	</div>
 	</section>
-	<section class="two">
-	
+	<section class="two" id="dojazd">
 	<div class="jumbotron light row" id="mapp">
-	   <h1 class="col-xs-12" style="text-align:center;">Dojazd</h1>
+	   <h1 class="col-xs-12" style="padding-top:68px;">Dojazd</h1>
     <!--The div element for the map -->
     <div id="map" class="col-xs-12"></div>
     <script>
@@ -129,14 +156,49 @@ function initMap() {
     </script>
 	</div>
 	</section>
-	
+	<section class="three"  id="kontakt">
+	<div class="jumbotron dark row">
+	<h1 class="col-sm-12">Kontakt</h1>
+    <form class="emailForm col-sm-6" method="POST" action="https://formspree.io/jarema.zhr@gmail.com">
+	<h3>Formularz</h3>
+  
+            <input class="form-data" name="email" type="email" placeholder="Twój email">
+
+            
+            <input class="form-data" name="_subject" placeholder="Temat">
+   
+         
+            <textarea class="form-data" name="message" placeholder="Treść wiadomości"></textarea>
+  
+        <label class="recaptcha-label">
+            <div class="g-recaptcha" tabindex="-1" data-sitekey="6LdWQm0UAAAAANEDAWDGuYAa3s2FXyztI2uOCLly" data-callback="recaptchaClearErr"></div>
+        </label>
+        <button class="emailFormSubmit btn" name="submit" type="submit" id="send">Wyślij</button>
+
+        <div class="emailFormAlert"></div>
+    </form>
+	<div class="adres col-sm-6">
+<i class="icon-location adicon"></i><div class="aditem">ul.Bieszczady 6 60-416 Poznań</div><br/>
+<i class="icon-phone adicon"></i><div class="aditem">+48 618-499-677</div><br/>
+<i class="icon-mobile adicon"></i><div class="aditem">+48 601-149-550</div><br/>
+<i class="icon-mail adicon"></i><div class="aditem">biurorach@data.pl</div><br/>
+
 	
 	</div>
+<script src="jquery-3.3.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="contact/js/emailform.js"></script>
+	</div>
+	</section>
+	</div>
+	</div>
+	<div class="footer">
+	&copy Designed by Jędrzej Sokołowski Webdevelopment - 2018
 	</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="jquery-3.3.1.min.js"></script>
   </body>
 </html>

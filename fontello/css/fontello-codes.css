@@ -1,5 +1,11 @@
 
+.icon-location:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
 .icon-calculator:before { content: '\e802'; } /* '' */
 .icon-group:before { content: '\e803'; } /* '' */
 .icon-group-circled:before { content: '\e804'; } /* '' */
+.icon-mobile:before { content: '\e805'; } /* '' */
+.icon-phone:before { content: '\e806'; } /* '' */
+.icon-up-hand:before { content: '\e807'; } /* '' */
 .icon-address:before { content: '\e817'; } /* '' */
+.icon-coffee:before { content: '\f0f4'; } /* '' */
